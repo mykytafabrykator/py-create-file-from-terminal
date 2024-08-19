@@ -62,8 +62,8 @@ def main() -> None:
         create_directory(directory_path)
 
     if args.file:
-        filepath = os.path.join(directory_path, args.file) \
-            if directory_path else args.file
+        filepath = (os.path.join(directory_path, args.file)
+                    if directory_path else args.file)
         create_file_with_content(filepath)
 
 
